@@ -1,17 +1,18 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.0.2"
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
 
     defaultConfig {
         applicationId "teamtreehouse.com.iamhere"
-        minSdkVersion 14
-        targetSdkVersion 21
+        minSdkVersion 19
+        targetSdkVersion 22
         versionCode 1
         versionName "1.0"
     }
     buildTypes {
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -20,7 +21,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:21.0.2'
-    compile 'com.google.android.gms:play-services:6.1.71'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.google.android.gms:play-services:6.5.87'
+    compile 'com.android.support:appcompat-v7:25.3.1'
 }
